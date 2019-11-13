@@ -1,0 +1,10 @@
+include(
+    ":example",
+    Deps.Project.Core.data,
+    Deps.Project.Core.domain,
+    Deps.Project.Core.ui,
+    Deps.Project.Library.data,
+    Deps.Project.Library.domain,
+    Deps.Project.Library.ui,
+    Deps.Project.strings
+)
