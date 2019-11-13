@@ -1,0 +1,48 @@
+{
+  "copyright": "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2019. All Rights Reserved.",
+  "roster": [
+    {
+      "person": {
+        "id": 8477479,
+        "fullName": "Tyler Bertuzzi",
+        "link": "/api/v1/people/8477479"
+      },
+      "jerseyNumber": "59",
+      "position": {
+        "code": "L",
+        "name": "Left Wing",
+        "type": "Forward",
+        "abbreviation": "LW"
+      }
+    },
+    {
+      "person": {
+        "id": 8477511,
+        "fullName": "Anthony Mantha",
+        "link": "/api/v1/people/8477511"
+      },
+      "jerseyNumber": "39",
+      "position": {
+        "code": "R",
+        "name": "Right Wing",
+        "type": "Forward",
+        "abbreviation": "RW"
+      }
+    },
+    {
+      "person": {
+        "id": 8477946,
+        "fullName": "Dylan Larkin",
+        "link": "/api/v1/people/8477946"
+      },
+      "jerseyNumber": "71",
+      "position": {
+        "code": "C",
+        "name": "Center",
+        "type": "Forward",
+        "abbreviation": "C"
+      }
+    }
+  ],
+  "link": "/api/v1/teams/17/roster"
+}

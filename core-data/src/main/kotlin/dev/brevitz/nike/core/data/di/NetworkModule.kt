@@ -31,7 +31,7 @@ object NetworkModule {
 
     @Provides
     @BaseUrl
-    fun baseUrl(): String = "https://www.nike.com/"
+    fun baseUrl(): String = "https://statsapi.web.nhl.com/api/v1/"
 
     @Provides
     @Singleton

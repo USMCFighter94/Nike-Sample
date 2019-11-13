@@ -1,0 +1,28 @@
+{
+  "copyright": "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2019. All Rights Reserved.",
+  "people": [
+    {
+      "id": 8477946,
+      "fullName": "Dylan Larkin",
+      "firstName": "Dylan",
+      "lastName": "Larkin",
+      "primaryNumber": "71",
+      "alternateCaptain": true,
+      "captain": false,
+      "rookie": false,
+      "shootsCatches": "L",
+      "rosterStatus": "Y",
+      "currentTeam": {
+        "id": 17,
+        "name": "Detroit Red Wings",
+        "link": "/api/v1/teams/17"
+      },
+      "primaryPosition": {
+        "code": "C",
+        "name": "Center",
+        "type": "Forward",
+        "abbreviation": "C"
+      }
+    }
+  ]
+}

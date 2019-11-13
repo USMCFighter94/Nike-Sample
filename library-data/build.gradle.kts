@@ -54,6 +54,7 @@ dependencies {
     kapt(Deps.Dagger.compiler)
     implementation(Deps.Dagger.core)
     implementation(Deps.kotlin)
+    implementation(Deps.moshi)
     implementation(Deps.Retrofit.core)
     implementation(Deps.Rx.android)
     implementation(Deps.Rx.java)
