@@ -7,5 +7,5 @@ import retrofit2.http.Path
 
 interface PlayerApi {
     @GET("people/{id}")
-    fun getPlayerDetails(@Path("id") id: Int): Single<Response<PlayerResponse>>
+    fun getPlayerDetails(@Path("id") id: Long): Single<Response<PlayerResponse>>
 }

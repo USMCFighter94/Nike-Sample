@@ -5,9 +5,11 @@ import android.util.AttributeSet
 import android.widget.FrameLayout
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
+import androidx.fragment.app.FragmentActivity
 import dev.brevitz.nike.core.domain.RemoteData
 import dev.brevitz.nike.library.ui.DaggerContainer
 import dev.brevitz.nike.library.ui.R
+import dev.brevitz.nike.library.ui.player.PlayerDetailDialogFragment
 import io.reactivex.rxkotlin.addTo
 import kotlinx.android.synthetic.main.view_roster.view.*
 import javax.inject.Inject
@@ -16,7 +18,12 @@ class RosterView : FrameLayout {
     @Inject
     internal lateinit var viewModel: RosterViewModel
 
-    private val controller = RosterPlayerController()
+    private val controller = RosterPlayerController { playerId ->
+        (context as? FragmentActivity?)?.supportFragmentManager?.let {
+            PlayerDetailDialogFragment.newInstance(playerId)
+                .show(it, PlayerDetailDialogFragment::class.java.simpleName)
+        }
+    }
 
     init {
         DaggerContainer.coreComponent.componentManager()

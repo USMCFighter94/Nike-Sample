@@ -53,6 +53,6 @@ class PlayerDataRepositoryTest : FunSpec() {
     }
 
     private companion object {
-        private const val PLAYER_ID = 8477946
+        private const val PLAYER_ID = 8477946L
     }
 }

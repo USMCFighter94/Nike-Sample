@@ -13,10 +13,10 @@ import dev.brevitz.nike.library.domain.player.PlayerStore
 
 class PlayerDataRepository(private val store: PlayerStore, private val api: PlayerApi) : PlayerRepository {
 
-    override fun getDetails(id: Int): ObservableRemoteData<Player> = store.get(id)
+    override fun getDetails(id: Long): ObservableRemoteData<Player> = store.get(id)
         .syncIfEmpty(fetchPlayerDetails(id))
 
-    private fun fetchPlayerDetails(id: Int) = api.getPlayerDetails(id)
+    private fun fetchPlayerDetails(id: Long) = api.getPlayerDetails(id)
         .mapWithResult { it?.toDomain() }
         .map { it.toRemoteData() }
         .doIfSuccess { store.store(it) }

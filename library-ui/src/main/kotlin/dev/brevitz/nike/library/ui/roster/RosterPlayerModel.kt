@@ -9,7 +9,10 @@ import dev.brevitz.nike.library.domain.roster.RosterPlayer
 import dev.brevitz.nike.library.ui.R
 import kotlinx.android.synthetic.main.view_roster_player.view.*
 
-internal data class RosterPlayerModel(private val player: RosterPlayer) : EpoxyModelWithView<ConstraintLayout>() {
+internal data class RosterPlayerModel(
+    private val player: RosterPlayer,
+    private val listener: RosterPlayerClickListener
+) : EpoxyModelWithView<ConstraintLayout>() {
 
     override fun bind(view: ConstraintLayout) {
         super.bind(view)
@@ -17,6 +20,7 @@ internal data class RosterPlayerModel(private val player: RosterPlayer) : EpoxyM
             rosterPlayerImage.load(player.image)
             rosterPlayerName.text = player.fullName
             rosterPlayerSubtitle.text = String.format(SUBTITLE, player.jerseyNumber, player.position)
+            setOnClickListener { listener(player.id) }
         }
     }
 

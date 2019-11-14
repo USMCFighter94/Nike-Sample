@@ -40,7 +40,7 @@ class OptionTest : DescribeSpec() {
         describe("Option Extensions") {
             context("toOption") {
                 it("Null Object") {
-                    null.toOption() shouldBe Option.None
+                    null.toOption<String>() shouldBe Option.None
                 }
 
                 it("Non Null Object") {

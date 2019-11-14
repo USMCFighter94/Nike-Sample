@@ -22,7 +22,7 @@ object Versions {
     const val rxBinding = "2.2.0"
     const val timber = "4.7.1"
 
-    const val kotlinTest = "3.4.0"
+    const val kotlinTest = "3.4.2"
     const val mockk = "1.9.3"
 
     const val testRunner = "1.3.0-alpha02"

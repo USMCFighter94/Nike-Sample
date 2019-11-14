@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <dev.brevitz.nike.core.ui.SquareWidthImageView
+            android:id="@+id/playerImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            tools:src="@tools:sample/avatars"
+            />
+
+        <TextView
+            android:id="@+id/playerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:text="@tools:sample/full_names"
+            />
+
+        <TextView
+            android:id="@+id/playerSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="@tools:sample/cities"
+            />
+
+        <TextView
+            android:id="@+id/playerTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="@tools:sample/cities"
+            />
+
+        <TextView
+            android:id="@+id/playerCaptainRookie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="@tools:sample/lorem"
+            />
+
+        <TextView
+            android:id="@+id/playerShoots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="@tools:sample/lorem"
+            />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/playerDetailLoadingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+</FrameLayout>
