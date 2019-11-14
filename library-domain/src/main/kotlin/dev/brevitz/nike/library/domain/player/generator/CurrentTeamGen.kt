@@ -1,4 +1,4 @@
-package dev.brevitz.nike.library.data.player.generator
+package dev.brevitz.nike.library.domain.player.generator
 
 import dev.brevitz.nike.library.domain.player.CurrentTeam
 import io.kotlintest.properties.Gen

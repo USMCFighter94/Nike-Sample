@@ -1,4 +1,4 @@
-package dev.brevitz.nike.library.data.roster.generator
+package dev.brevitz.nike.library.domain.roster.generator
 
 import dev.brevitz.nike.library.domain.roster.Roster
 import dev.brevitz.nike.library.domain.roster.RosterPlayer

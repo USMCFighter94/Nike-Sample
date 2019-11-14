@@ -56,6 +56,8 @@ dependencies {
 
     implementation(Deps.appCompat)
     implementation(Deps.cardView)
+    implementation(Deps.constraintLayout)
+    implementation(Deps.coreKtx)
     kapt(Deps.Dagger.compiler)
     implementation(Deps.Dagger.core)
     implementation(Deps.Epoxy.core)

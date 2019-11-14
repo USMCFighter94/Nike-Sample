@@ -7,7 +7,7 @@ import dev.brevitz.nike.library.data.loadFromFile
 import dev.brevitz.nike.library.data.moshi
 import dev.brevitz.nike.library.data.player.api.PlayerApi
 import dev.brevitz.nike.library.data.player.api.PlayerResponse
-import dev.brevitz.nike.library.data.player.generator.PlayerGen
+import dev.brevitz.nike.library.domain.player.generator.PlayerGen
 import dev.brevitz.nike.library.domain.player.PlayerStore
 import io.kotlintest.specs.FunSpec
 import io.mockk.every

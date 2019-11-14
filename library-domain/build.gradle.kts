@@ -18,6 +18,5 @@ dependencies {
 
     implementation(Deps.kotlin)
     implementation(Deps.Rx.java)
-
-    testImplementation(Deps.Test.kotlinTest)
+    implementation(Deps.Test.kotlinTest)
 }

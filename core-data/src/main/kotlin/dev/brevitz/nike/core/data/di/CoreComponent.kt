@@ -14,4 +14,7 @@ interface CoreComponent : DaggerComponent {
 
     @ObserveThread
     fun observeThread(): Scheduler
+
+    @SubscribeThread
+    fun subscribeThread(): Scheduler
 }

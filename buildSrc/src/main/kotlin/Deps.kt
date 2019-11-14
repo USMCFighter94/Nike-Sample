@@ -1,6 +1,8 @@
 object Deps {
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val cardView = "androidx.cardview:cardview:${Versions.cardView}"
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
     const val material = "com.google.android.material:material:${Versions.material}"
     const val navigation = "android.arch.navigation:navigation-fragment-ktx:${Versions.navigation}"
     const val navigationUi = "android.arch.navigation:navigation-ui-ktx:${Versions.navigation}"

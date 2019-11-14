@@ -5,7 +5,7 @@ import dev.brevitz.nike.core.domain.RemoteError
 import dev.brevitz.nike.core.domain.Result
 import dev.brevitz.nike.library.data.loadFromFile
 import dev.brevitz.nike.library.data.moshi
-import dev.brevitz.nike.library.data.player.generator.PlayerGen
+import dev.brevitz.nike.library.domain.player.generator.PlayerGen
 import io.kotlintest.matchers.types.shouldBeTypeOf
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.FunSpec

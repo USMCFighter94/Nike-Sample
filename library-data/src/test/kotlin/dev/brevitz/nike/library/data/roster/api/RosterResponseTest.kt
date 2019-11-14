@@ -4,7 +4,7 @@ import com.squareup.moshi.Types
 import dev.brevitz.nike.core.domain.Result
 import dev.brevitz.nike.library.data.loadFromFile
 import dev.brevitz.nike.library.data.moshi
-import dev.brevitz.nike.library.data.roster.generator.RosterGen
+import dev.brevitz.nike.library.domain.roster.generator.RosterGen
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.FunSpec
 

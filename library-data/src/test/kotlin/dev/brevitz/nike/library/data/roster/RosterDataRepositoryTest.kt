@@ -7,7 +7,7 @@ import dev.brevitz.nike.library.data.loadFromFile
 import dev.brevitz.nike.library.data.moshi
 import dev.brevitz.nike.library.data.roster.api.RosterApi
 import dev.brevitz.nike.library.data.roster.api.RosterResponse
-import dev.brevitz.nike.library.data.roster.generator.RosterGen
+import dev.brevitz.nike.library.domain.roster.generator.RosterGen
 import dev.brevitz.nike.library.domain.roster.RosterStore
 import io.kotlintest.specs.FunSpec
 import io.mockk.every
