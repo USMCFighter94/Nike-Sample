@@ -49,8 +49,6 @@ class RosterView : FrameLayout {
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-        viewModel.start()
-
         viewModel.observe()
             .map { it.roster }
             .distinctUntilChanged()
@@ -74,5 +72,9 @@ class RosterView : FrameLayout {
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
         viewModel.stop()
+    }
+
+    fun setTeamId(id: Int) {
+        viewModel.getRoster(id)
     }
 }

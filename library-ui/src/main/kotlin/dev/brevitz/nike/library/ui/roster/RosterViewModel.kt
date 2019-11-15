@@ -18,8 +18,8 @@ internal class RosterViewModel @Inject constructor(
     @SubscribeThread private val subscribeThread: Scheduler
 ) : ViewModel<RosterViewModel.State>(State()) {
 
-    fun start() {
-        repository.getRoster(TEAM_ID)
+    fun getRoster(id: Int) {
+        repository.getRoster(id)
             .observeOn(observeThread)
             .subscribeOn(subscribeThread)
             .doOnNext {
@@ -38,8 +38,4 @@ internal class RosterViewModel @Inject constructor(
     data class State(
         val roster: RemoteData<Roster, RemoteError> = RemoteData.NotAsked
     )
-
-    private companion object {
-        private const val TEAM_ID = 17
-    }
 }

@@ -18,7 +18,7 @@ class RosterViewModelTest : FunSpec() {
         test("Repository is loading") {
             every { repository.getRoster(any()) } returns Observable.just(RemoteData.Loading)
 
-            viewModel.start()
+            viewModel.getRoster(17)
             viewModel.observe()
                 .map { it.roster }
                 .test()
@@ -30,7 +30,7 @@ class RosterViewModelTest : FunSpec() {
             val roster = RosterGen().random().first()
             every { repository.getRoster(any()) } returns Observable.just(RemoteData.Success(roster))
 
-            viewModel.start()
+            viewModel.getRoster(17)
             viewModel.observe()
                 .map { it.roster }
                 .test()
@@ -41,7 +41,7 @@ class RosterViewModelTest : FunSpec() {
         test("Repository is error") {
             every { repository.getRoster(any()) } returns Observable.just(RemoteData.Error(RemoteError.HttpError(401, "Nah son")))
 
-            viewModel.start()
+            viewModel.getRoster(17)
             viewModel.observe()
                 .map { it.roster }
                 .test()

@@ -6,12 +6,7 @@
     android:orientation="vertical"
     >
 
-    <dev.brevitz.nike.library.ui.roster.RosterView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-
-    <dev.brevitz.nike.library.ui.location.LocationView
+    <dev.brevitz.nike.library.ui.TeamView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />

@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Nike Sample</string>
+
     <string name="error_dialog_title">Error</string>
     <string name="error_dialog_message">There was an error. Please try again.</string>
+
     <string name="getting_location">Getting location....</string>
     <string name="location_button_message">Find me!</string>
+    <string name="user_location_message">You are at: {lat}, {long}</string>
+    <string name="user_city_message">Looks like you\'re in {city}, {state}</string>
+
+    <string name="maybe_interested">Maybe you\'d be interested in</string>
 </resources>
