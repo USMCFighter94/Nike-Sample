@@ -19,7 +19,7 @@ class RosterResponseTest : FunSpec() {
 
     init {
         test("roster is transformed correctly") {
-            rosterResponse?.toDomain(17) shouldBe Result.succeed(expected)
+            rosterResponse?.toDomain(17) shouldBe Result.succeed(expected.copy(players = expected.players.sortedBy { it.jerseyNumber.toInt() }))
         }
     }
 }

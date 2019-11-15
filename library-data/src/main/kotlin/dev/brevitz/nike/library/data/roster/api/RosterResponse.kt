@@ -7,6 +7,6 @@ import dev.brevitz.nike.library.domain.roster.Roster
 data class RosterResponse(val copyright: String?, val roster: List<RosterPlayerResponse>?) {
     fun toDomain(id: Int) = attemptTransform {
         require(roster != null) { "Must provider a roster" }
-        Roster(id, roster.mapNotNull { it.toDomain().successOrNull() })
+        Roster(id, roster.mapNotNull { it.toDomain().successOrNull() }.sortedBy { it.jerseyNumber.toInt() })
     }
 }
