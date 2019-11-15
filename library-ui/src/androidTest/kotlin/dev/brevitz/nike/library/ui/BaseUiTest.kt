@@ -1,6 +1,6 @@
-package dev.brevitz.nike
+package dev.brevitz.nike.library.ui
 
-import androidx.test.core.app.ApplicationProvider
+import androidx.annotation.CallSuper
 import androidx.test.espresso.IdlingRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
@@ -13,14 +13,14 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 abstract class BaseUiTest {
-    private val app = ApplicationProvider.getApplicationContext<App>()
-    private val okHttpResource = OkHttpIdlingResource(app.coreComponent().okHttp())
+    private val okHttpResource = OkHttpIdlingResource(DaggerContainer.coreComponent.okHttp())
 
-    private val activityRule = ActivityTestRule(MainActivity::class.java)
+    protected val activityRule = ActivityTestRule(MockActivity::class.java, true, false)
 
     @get:Rule
     val ruleChain: RuleChain = RuleChain.outerRule(activityRule)
 
+    @CallSuper
     open fun setup() {
         IdlingRegistry.getInstance().register(okHttpResource)
 

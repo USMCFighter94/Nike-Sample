@@ -1,4 +1,4 @@
-package dev.brevitz.nike
+package dev.brevitz.nike.library.ui
 
 import androidx.test.espresso.IdlingResource
 import okhttp3.OkHttpClient

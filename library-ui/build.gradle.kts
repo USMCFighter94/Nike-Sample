@@ -13,6 +13,7 @@ android {
     defaultConfig {
         minSdkVersion(Sdk.min)
         targetSdkVersion(Sdk.target)
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -40,7 +41,15 @@ android {
             java.srcDirs("src/test/kotlin")
             resources.srcDirs("src/test/resources")
         }
-        getByName("androidTest").java.srcDirs("src/androidTest/kotlin")
+        getByName("androidTest").apply{
+            java.srcDirs("src/androidTest/kotlin")
+            res.srcDirs("src/androidTest/res")
+        }
+    }
+
+    packagingOptions {
+        exclude("META-INF/LICENSE.md")
+        exclude("META-INF/LICENSE-notice.md")
     }
 }
 
@@ -73,4 +82,13 @@ dependencies {
 
     testImplementation(Deps.Test.kotlinTest)
     testImplementation(Deps.Test.mockk)
+
+    androidTestImplementation(Deps.Test.androidCore)
+    androidTestImplementation(Deps.Test.androidXJUnit)
+    androidTestImplementation(Deps.Test.espresso)
+    androidTestImplementation(Deps.Test.espressoContrib)
+    androidTestImplementation(Deps.Retrofit.core)
+    androidTestImplementation(Deps.Test.rules)
+    androidTestImplementation(Deps.Test.runner)
+    androidTestImplementation(Deps.Test.rxIdler)
 }

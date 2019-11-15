@@ -3,8 +3,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id(Plugins.app)
     kotlin(Plugins.Kotlin.android)
-    kotlin(Plugins.Kotlin.extensions)
-    kotlin(Plugins.Kotlin.kapt)
 }
 
 android {
@@ -16,7 +14,6 @@ android {
         targetSdkVersion(Sdk.target)
         versionCode = Versions.versionCode
         versionName = Versions.versionName
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -56,8 +53,6 @@ tasks.withType<KotlinCompile>().all {
 dependencies {
     implementation(project(Deps.Project.Library.ui))
 
-    kapt(Deps.Dagger.compiler)
-    implementation(Deps.Dagger.core)
     implementation(Deps.kotlin)
     implementation(Deps.navigation)
     implementation(Deps.navigationUi)

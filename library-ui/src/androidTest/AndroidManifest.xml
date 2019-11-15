@@ -1,0 +1,10 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dev.brevitz.nike.library.ui"
+    >
+
+    <application android:theme="@style/Theme.AppCompat">
+        <activity android:name=".MockActivity" />
+    </application>
+
+</manifest>
