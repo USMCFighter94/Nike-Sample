@@ -2,9 +2,9 @@ package dev.brevitz.nike.core.ui
 
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.ImageView
+import androidx.appcompat.widget.AppCompatImageView
 
-class SquareWidthImageView : ImageView {
+class SquareWidthImageView : AppCompatImageView {
 
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
